@@ -59,12 +59,12 @@
             const total = parseFloat(document.getElementById('total').value);
             
             if (isNaN(cantidad) || isNaN(total) || total === 0) {
-                document.getElementById('result').textContent = 'Por favor, ingrese números válidos.';
+                document.getElementById('result').textContent = 'Por favor, ingrese nÃºmeros vÃ¡lidos.';
                 return;
             }
             
             const porcentaje = (cantidad / total) * 100;
-            document.getElementById('result').textContent = El porcentaje es: ${porcentaje.toFixed(2)}%;
+            document.getElementById('result').textContent = 'El porcentaje es: ${porcentaje.toFixed(2)}%';
         }
     </script>
 </body>

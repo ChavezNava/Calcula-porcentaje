@@ -49,11 +49,13 @@
         <h2>Calculadora de Porcentaje</h2>
         <input type="number" id="cantidad" placeholder="Cantidad">
         <input type="number" id="total" placeholder="Total">
-        <button onclick="calcularPorcentaje()">Calcular</button>
+        <button id="calcular-btn">Calcular</button>
         <div id="result"></div>
     </div>
 
     <script>
+        document.getElementById('calcular-btn').addEventListener('click', calcularPorcentaje);
+
         function calcularPorcentaje() {
             const cantidad = parseFloat(document.getElementById('cantidad').value);
             const total = parseFloat(document.getElementById('total').value);
@@ -64,7 +66,7 @@
             }
             
             const porcentaje = (cantidad / total) * 100;
-            document.getElementById('result').textContent = 'El porcentaje es: ${porcentaje.toFixed(2)}%';
+            document.getElementById('result').textContent = `El porcentaje es: ${porcentaje.toFixed(2)}%`;
         }
     </script>
 </body>
